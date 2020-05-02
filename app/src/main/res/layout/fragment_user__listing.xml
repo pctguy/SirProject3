@@ -1,0 +1,35 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.receipt.invoice.stock.sirproject.User.User_Listing"
+    android:background="@color/white">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableRight="@drawable/search_icon"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="Search Users"
+        android:layout_marginTop="30dp"
+        android:id="@+id/search"
+        android:padding="10dp"
+        android:background="@drawable/edittextshape"
+        android:elevation="3dp"
+        android:maxLines="1"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recycleruser"
+        android:layout_marginTop="45dp"
+        android:layout_marginBottom="45dp"
+        android:layout_below="@+id/search">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+
+
+</RelativeLayout>

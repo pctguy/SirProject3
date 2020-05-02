@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context="com.receipt.invoice.stock.sirproject.Home.Home_Activity">
+
+    <include layout="@layout/toolbar">
+    </include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?actionBarSize"
+        android:fillViewport="true"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <RelativeLayout
+                android:id="@+id/bluerelative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/home_white_curve"
+                android:paddingBottom="20dp"
+                android:elevation="10dp"
+                >
+
+                <ImageView
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/menu_icon"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/menu"
+                    android:padding="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hello John"
+                    android:layout_below="@+id/menu"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    android:id="@+id/hello"
+                    android:textColor="@color/darkgray"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="a quick look at your key business activities"
+                    android:layout_below="@+id/hello"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/description"
+                    android:textColor="@color/darkgray"
+                    android:textSize="12sp"/>
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:layout_below="@+id/description"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/businessactivitiesRV"
+                    >
+
+                </android.support.v7.widget.RecyclerView>
+
+            </RelativeLayout>
+
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:id="@+id/invoiceoverdueRV"
+                android:layout_below="@+id/bluerelative">
+
+            </android.support.v7.widget.RecyclerView>
+
+
+            <RelativeLayout
+                android:elevation="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:paddingTop="25dp"
+                android:paddingBottom="25dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/customers"
+                android:layout_below="@+id/invoiceoverdueRV"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/white_curve">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Customers"
+                    android:id="@+id/customerstxt"
+                    android:textColor="@color/darkgray"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="See all"
+                    android:id="@+id/seeall"
+                    android:paddingRight="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingBottom="5dp"
+                    android:layout_alignParentEnd="true"
+                    android:textColor="@color/darkgray"/>
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/customerstxt"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/user_01"
+                    app:riv_corner_radius="100dp"
+                    android:id="@+id/image1"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Janice"
+                    android:layout_below="@+id/image1"
+                    android:id="@+id/name1"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"/>
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/customerstxt"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/user_02"
+                    app:riv_corner_radius="100dp"
+                    android:id="@+id/image2"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Edward"
+                    android:layout_below="@+id/image2"
+                    android:id="@+id/name2"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_centerHorizontal="true"/>
+
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/customerstxt"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/user_03"
+                    app:riv_corner_radius="100dp"
+                    android:id="@+id/image3"
+                    android:layout_alignParentEnd="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Jesse"
+                    android:layout_below="@+id/image3"
+                    android:id="@+id/name3"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_alignParentEnd="true"/>
+
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/name1"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/sir_app_logo"
+                    app:riv_corner_radius="100dp"
+                    android:id="@+id/image4"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Jacob"
+                    android:layout_below="@+id/image4"
+                    android:id="@+id/name4"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"/>
+
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/name2"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/user_04"
+                    app:riv_corner_radius="100dp"
+                    android:id="@+id/image5"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Tim"
+                    android:layout_below="@+id/image5"
+                    android:id="@+id/name5"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_centerHorizontal="true"/>
+
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/name3"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/user_01"
+                    app:riv_corner_radius="100dp"
+                    android:id="@+id/image6"
+                    android:layout_alignParentEnd="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Janice"
+                    android:layout_below="@+id/image6"
+                    android:id="@+id/name6"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_alignParentEnd="true"/>
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:elevation="10dp"
+                android:layout_marginBottom="90dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:paddingTop="25dp"
+                android:paddingBottom="25dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/vendors"
+                android:layout_below="@+id/customers"
+                android:layout_marginTop="35dp"
+                android:background="@drawable/white_curve">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Vendors"
+                    android:id="@+id/vendorstxt"
+                    android:textColor="@color/darkgray"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="See all"
+                    android:id="@+id/vendorsseeall"
+                    android:paddingRight="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingBottom="5dp"
+                    android:layout_alignParentEnd="true"
+                    android:textColor="@color/darkgray"/>
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/vendorstxt"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/user_04"
+                    app:riv_corner_radius="100dp"
+                    android:id="@+id/vimage1"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Janice"
+                    android:layout_below="@+id/vimage1"
+                    android:id="@+id/vname1"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"/>
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/vendorstxt"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/user_03"
+                    app:riv_corner_radius="100dp"
+                    android:id="@+id/vimage2"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Edward"
+                    android:layout_below="@+id/vimage2"
+                    android:id="@+id/vname2"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_centerHorizontal="true"/>
+
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/vendorstxt"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/user_02"
+                    app:riv_corner_radius="100dp"
+                    android:id="@+id/vimage3"
+                    android:layout_alignParentEnd="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Jesse"
+                    android:layout_below="@+id/vimage3"
+                    android:id="@+id/vname3"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_alignParentEnd="true"/>
+
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/vname1"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/sir_app_logo"
+                    app:riv_corner_radius="100dp"
+                    android:id="@+id/vimage4"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Jacob"
+                    android:layout_below="@+id/vimage4"
+                    android:id="@+id/vname4"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"/>
+
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/vname2"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/user_01"
+                    app:riv_corner_radius="100dp"
+                    android:id="@+id/vimage5"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Tim"
+                    android:layout_below="@+id/vimage5"
+                    android:id="@+id/vname5"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_centerHorizontal="true"/>
+
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/vname3"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/sir_app_logo"
+                    app:riv_corner_radius="100dp"
+                    android:id="@+id/vimage6"
+                    android:layout_alignParentEnd="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Janice"
+                    android:layout_below="@+id/vimage6"
+                    android:id="@+id/vname6"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_alignParentEnd="true"/>
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/avibackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#66000000"/>
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/avi"
+        android:layout_centerInParent="true"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        style="@style/AVLoadingIndicatorView"
+        android:visibility="gone"
+        app:indicatorName="BallClipRotatePulseIndicator"
+
+        />
+    <include layout="@layout/bottom_navigation">
+    </include>
+
+
+
+
+
+</RelativeLayout>

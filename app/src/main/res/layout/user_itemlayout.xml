@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:layout_marginBottom="45dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/sir_app_logo"
+        app:riv_corner_radius="100dp"
+        android:id="@+id/image"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="John smith"
+        android:textStyle="bold"
+        android:id="@+id/username"
+        android:layout_toRightOf="@+id/image"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Super Admin"
+        android:id="@+id/userrole"
+        android:layout_toRightOf="@+id/image"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/username"
+        android:textColor="@color/gray"
+        android:textSize="12sp"
+        android:layout_marginTop="5dp"
+        android:layout_toLeftOf="@+id/userdetail"
+        android:layout_marginRight="5dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/userdetail"
+        android:layout_below="@+id/username"
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/lightpurple"
+        android:textSize="10sp"
+        android:layout_marginTop="5dp"
+        android:padding="3dp"
+        android:drawableLeft="@drawable/ic_arrow"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray"
+        android:layout_below="@+id/userrole"
+        android:layout_marginTop="40dp">
+    </View>
+
+
+
+
+
+</RelativeLayout>
